@@ -1,0 +1,36 @@
+
+@import 'style/helpers/vars';
+@import 'style/helpers/mixins';
+
+.LandingFooter {
+
+    &__soc-links {
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        width: 250px;
+        justify-content: space-between;
+
+        & > * {
+            &:hover {
+                opacity: .8;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-left: 20px;
+        }
+    }
+
+    &__powered-by-wx {
+        margin: auto;
+        padding: 34px 0;
+        text-align: center;
+
+        & > img {
+            cursor: pointer;
+            width: 180px;
+        }
+    }
+}
+

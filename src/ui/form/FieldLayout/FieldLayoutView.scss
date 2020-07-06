@@ -1,0 +1,34 @@
+@import '../../../style/helpers/vars';
+
+.FieldLayoutView {
+  &__label {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 8px;
+
+
+    &_required:after {
+      display: inline-block;
+      content: '*';
+      color: $color-brand-red;
+      margin: 0 0 0 3px;
+    }
+  }
+  &__invalid-feedback {
+    display: block !important;
+    color: $color-brand-red;
+    padding-top: 3px;
+    margin-bottom: 5px !important;
+    font-size: 12px;
+  }
+  &__hint {
+    width: 100%;
+    text-align: right;
+    margin-top: 9px;
+    font-size: 12px;
+    line-height: 15px;
+    min-height: 15px;
+  }
+}

@@ -1,0 +1,134 @@
+@import 'style/helpers/vars';
+
+.ModalView {
+
+  $root: &;
+  $header-height: 60px;
+
+  &_has-header {
+    #{$root}__inner {
+      padding-top: $header-height;
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: $zi-popup;
+
+    &_blur {
+      //fallback
+      background: rgba(23, 24, 58, 0.7);
+    }
+  }
+
+  &__modal {
+    max-width: 800px;
+    min-height: 400px;
+    display: flex;
+    width: 90%;
+    background: $color-brand-purple;
+    border: 1px solid $color-brand-purple-light;
+    outline: none;
+  }
+
+  &__inner {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__header {
+    background-color: #353569;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $header-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  &__close {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      background-color: #333;
+    }
+
+    &::before,
+    &::after
+    {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      margin-top: -8px;
+      left: 50%;
+      width: 1px;
+      height: 16px;
+      background-color: $color-brand-blue;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 70px 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    height: 100%;
+  }
+}
+
+@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
+  .ModalView__overlay_blur {
+    background: transparent;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+  }
+}
+
+//fade
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}

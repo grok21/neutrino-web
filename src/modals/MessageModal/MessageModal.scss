@@ -1,0 +1,24 @@
+
+.MessageModal {
+
+  $root: &;
+
+  &_with-image {
+    #{$root}__text {
+      margin: 0 0 50px;
+    }
+  }
+
+  &__inner {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    margin: 0;
+    padding: 0;
+  }
+}

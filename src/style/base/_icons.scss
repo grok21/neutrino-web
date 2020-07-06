@@ -1,0 +1,159 @@
+@import '../../style/helpers/mixins';
+$icons-dir: '../static/icons';
+
+.Icon {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 16px;
+  min-height: 16px;
+
+  &__arrow-up {
+    min-width: 10px;
+    min-height: 7px;
+    background-image: url('#{$icons-dir}/arrow-up.svg');
+  }
+
+  &__arrow-right {
+    min-width: 10px;
+    min-height: 12px;
+    background-image: url('#{$icons-dir}/arrow-right.svg');
+  }
+
+  &__arrow-right-2 {
+    min-width: 11px;
+    min-height: 10px;
+    background-image: url('#{$icons-dir}/arrow-right-2.svg');
+  }
+
+
+  &__waves-keeper {
+    min-width: 174px;
+    min-height: 24px;
+    background-image: url('#{$icons-dir}/waves-keeper.svg');
+  }
+
+  &__logout {
+    min-width: 15px;
+    min-height: 15px;
+    background-image: url('#{$icons-dir}/logout.svg');
+  }
+
+  &__point-in-circle {
+    min-width: 13px;
+    min-height: 13px;
+
+    &_green {
+      background-image: url('#{$icons-dir}/point-in-circle_green.svg');
+    }
+  }
+
+  &__home {
+    min-width: 16px;
+    min-height: 16px;
+    background-image: url('#{$icons-dir}/home.svg');
+  }
+
+  &__learn {
+    min-width: 16px;
+    min-height: 13px;
+    background-image: url('#{$icons-dir}/learn.svg');
+  }
+
+  &__double-arrow-up {
+    min-width: 14px;
+    min-height: 14px;
+    background-image: url('#{$icons-dir}/double-arrow-up.svg');
+  }
+
+  &__double-arrow-down {
+    min-width: 14px;
+    min-height: 14px;
+    background-image: url('#{$icons-dir}/double-arrow-down.svg');
+  }
+
+  &__trade {
+    min-width: 19px;
+    min-height: 13px;
+    background-image: url('#{$icons-dir}/trade.svg');
+  }
+
+  &__exchange {
+    min-width: 13px;
+    min-height: 15px;
+    background-image: url('#{$icons-dir}/exchange.svg');
+  }
+
+  &__question {
+    min-width: 6px;
+    min-height: 10px;
+    background-image: url('#{$icons-dir}/question.svg');
+  }
+
+  &__cancel {
+    min-width: 11px;
+    min-height: 10px;
+    background-image: url('#{$icons-dir}/cancel.svg');
+  }
+
+  &__search {
+    min-width: 11px;
+    min-height: 11px;
+    background-image: url('#{$icons-dir}/search.svg');
+  }
+
+  &__checkbox {
+    min-width: 11px;
+    min-height: 10px;
+    background-image: url('#{$icons-dir}/checkbox.svg');
+  }
+
+  &__swap {
+    min-width: 88px;
+    min-height: 85px;
+    background-image: url('#{$icons-dir}/swap.svg');
+  }
+
+  &__wave {
+    min-width: 20px;
+    min-height: 20px;
+    background-image: url('#{$icons-dir}/wave.svg');
+  }
+
+  &__usd-n {
+    min-width: 20px;
+    min-height: 20px;
+    background-image: url('#{$icons-dir}/usd-n.svg');
+  }
+
+  &__usd-nb {
+    min-width: 20px;
+    min-height: 20px;
+    background-image: url('#{$icons-dir}/n_icon/light-not-filled/Neutrino_N_ICON.svg');
+    background-size: contain;
+  }
+
+  &__eur-n {
+    min-width: 20px;
+    min-height: 20px;
+    background-image: url('#{$icons-dir}/eur-n.svg');
+  }
+
+  &__eur-nb {
+    min-width: 20px;
+    min-height: 20px;
+    background-image: url('#{$icons-dir}/eur-nb.svg');
+  }
+
+  &__successful {
+    min-width: 66px;
+    min-height: 66px;
+    background-image: url('#{$icons-dir}/successful.svg');
+  }
+
+  &__copy {
+    min-width: 18px;
+    min-height: 21px;
+    background-image: url('#{$icons-dir}/copy.svg');
+  }
+}

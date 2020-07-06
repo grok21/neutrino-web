@@ -1,0 +1,79 @@
+@import '../../style/helpers/vars';
+@import '../../style/helpers/mixins';
+
+.LeftSidebar {
+  $root: &;
+
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__home-icon {
+    width: 32px;
+    height: 32px;
+    background: $color-brand-purple-light;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 23px;
+
+    &:hover {
+      background: linear-gradient(43.21deg, #6121A1 18.12%, #00AEFF 101.23%);
+    }
+
+  }
+
+  &__currencies {
+    width: 100%;
+  }
+
+  &__currency {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 23px;
+
+    &:hover,
+    &_active {
+      #{$root}__currency-icon {
+        filter: none;
+      }
+
+      #{$root}__currency-label {
+        filter: none;
+      }
+    }
+
+    &_active {
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 6px;
+        background-color: $color-brand-azure;
+      }
+    }
+  }
+
+  &__currency-icon {
+    filter: grayscale(1);
+    min-width: 32px;
+    min-height: 32px;
+
+  }
+
+  &__currency-label {
+    filter: grayscale(1);
+    color: $color-brand-azure;
+    font-size: 10px;
+    line-height: 12px;
+    margin-top: 4px;
+  }
+}
